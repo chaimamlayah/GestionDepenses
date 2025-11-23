@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo GestionDepenses"
+        android:scaleType="centerCrop"
+        android:translationY="100dp"
+        android:alpha="0"/>
+
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GestionDepenses"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#812A2A"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="24dp"
+        android:alpha="0"
+        android:translationY="50dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contrôlez votre budget en toute simplicité"
+        android:textSize="16sp"
+        android:textColor="#565454"
+        android:layout_marginTop="100dp"
+        android:alpha="0"
+        android:translationY="30dp"/>
+
+</LinearLayout>

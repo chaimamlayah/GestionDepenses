@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+
+        <ImageView
+            android:id="@+id/imglogo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="Logo GestionDepenses"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour futur millionnaire !"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#812A2A"
+            android:layout_marginBottom="27dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:boxStrokeColor="#812A2A"
+            app:hintTextColor="#812A2A"
+            app:startIconDrawable="@drawable/outline_attach_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Adresse Email"
+                android:inputType="textEmailAddress"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:boxStrokeColor="#812A2A"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="#812A2A"
+            app:startIconDrawable="@drawable/outline_contacts_product_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mot de passe"
+                android:inputType="textPassword"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_conn"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:text="Se connecter"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="18dp"
+            android:backgroundTint="#812A2A"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/btn_compte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pas encore de compte ? Inscrivez-vous"
+            android:textSize="16sp"
+            android:textColor="#812A2A"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

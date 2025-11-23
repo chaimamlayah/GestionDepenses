@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#812A2A"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/logo"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Gestion Dépenses"
+                android:textColor="@android:color/white"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/outline_directions_walk_24"
+                android:contentDescription="Déconnexion"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Votre salaire mensuel"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#812A2A"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salaire"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            app:boxStrokeColor="#812A2A"
+            app:hintTextColor="#812A2A"
+            app:startIconContentDescription="Salaire"
+            app:startIconDrawable="@drawable/ic_money">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/salaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="19sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouvelle dépense"
+            android:textSize="23sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="#333"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:hint="Catégorie"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            app:boxStrokeColor="#812A2A"
+            app:startIconDrawable="@drawable/ic_category">
+
+            <EditText
+                android:id="@+id/categorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+
+            android:hint="Description (facultatif)"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:startIconDrawable="@drawable/ic_description"
+            app:startIconTint="#666666">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:hint="Montant (DT)"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_attach_money">
+
+            <EditText
+                android:id="@+id/montant"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date de la dépense"
+            app:startIconDrawable="@drawable/ic_calendar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:paddingRight="10dp"
+                android:paddingLeft="20dp"
+                android:clickable="true"
+
+                android:inputType="none"
+                android:textSize="18sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="32dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_enreg"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="58dp"
+                android:layout_margin="10dp"
+                android:text="Enregistrer"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                android:textColor="@color/white"
+                android:backgroundTint="#812A2A"
+                android:layout_marginEnd="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="58dp"
+                android:layout_margin="10dp"
+                android:text="Voir Liste"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                android:backgroundTint="#636363"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
